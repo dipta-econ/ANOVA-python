@@ -12,7 +12,7 @@ T3 = df['Treatement3'].tolist()
 
 # Set Hypothesis
 print('H0: μ = μ₂ = μ₃')
-print('H1: All means are not equal')
+print('H1: All means are not equal or at least one mean differ')
 
 # Calculation
 f_test, p_value = stats.f_oneway(T1, T2, T3)
@@ -28,3 +28,4 @@ if p_value < 0.05:
 else:
     print('H0 is accepted and H1 in rejected')
     print('μ = μ₂ = μ₃')
+
